@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class TermekController extends Controller
 {
-    //
+    //DVM 8000/api/termek en található meg a laravel
     public function index()
     {
         return Termek::all();
