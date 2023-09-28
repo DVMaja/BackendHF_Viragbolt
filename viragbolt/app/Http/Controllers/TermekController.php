@@ -50,8 +50,8 @@ class TermekController extends Controller
     public function editView($id)
     {
         $users = User::all();
-        $book = Termek::find($id);
-        return view('termek.edit', ['users' => $users, 'book' => $book]);
+        $termek = Termek::find($id);
+        return view('termek.edit', ['users' => $users, 'termek' => $termek]);
     }
     public function listView()
     {
