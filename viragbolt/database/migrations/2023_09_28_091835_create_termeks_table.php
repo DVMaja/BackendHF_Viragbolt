@@ -15,20 +15,20 @@ return new class extends Migration
         Schema::create('termeks', function (Blueprint $table) {
             $table->id('termek_id');            
             $table->integer('eladasi_ar');
-            $table->foreignId('virag')->references('virag_id')->on('virags');
+            $table->foreignId('virag_id')->references('virag_id')->on('virags');
             $table->timestamps();
         });
 
         Termek::create([
             'termek_id' => 1
             ,'eladasi_ar' => 1000
-            ,'tipus' => 1
+            ,'virag_id' => 1
         ]);
 
         Termek::create([
             'termek_id' => 2
             ,'eladasi_ar' => 16000
-            ,'tipus' => 2
+            ,'virag_id' => 2
         ]);
     }
 

@@ -15,20 +15,20 @@ return new class extends Migration
         Schema::create('virags', function (Blueprint $table) {
             $table->id('virag_id');
             $table->string('neve', 32);            
-            $table->foreignId('tipus')->references('tipus_id')->on('tipuses');
+            $table->foreignId('tipus_id')->references('tipus_id')->on('tipuses');
             $table->timestamps();
         });
 
         Virag::create([
             'virag_id' => 1
-            ,'neve' => 'begonia'
-            ,'tipus' => 1
+            ,'neve' => "begonia"
+            ,'tipus_id' => 1
         ]);
 
         Virag::create([
             'virag_id' => 2
-            ,'neve' => 'muskátli'
-            ,'tipus' => 2
+            ,'neve' => "muskátli"
+            ,'tipus_id' => 2
         ]);
 
     }

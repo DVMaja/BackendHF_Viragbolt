@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Tipus extends Model
 {
     use HasFactory;
+    protected  $primaryKey = 'tipus_id';
+    protected $fillable = [
+        'neve',
+        'leiras'
+    ];
 }

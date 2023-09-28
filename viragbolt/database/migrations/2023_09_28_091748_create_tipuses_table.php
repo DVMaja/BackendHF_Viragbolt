@@ -21,14 +21,14 @@ return new class extends Migration
 
         Tipus::create([
             'tipus_id' => 1
-            ,'neve' => 'cserepes virág'
-            ,'leiras' => 'Cserépben lévő virágok'
+            ,'neve' => "cserepes virág"
+            ,'leiras' => "Cserépben lévő virágok"
         ]);
 
         Tipus::create([
             'tipus_id' => 2
-            ,'neve' => 'évelő virágok'
-            ,'leiras' => 'minden évben hoznak virágot'
+            ,'neve' => "évelő virágok"
+            ,'leiras' => "minden évben hoznak virágot"
         ]);
     }
 
