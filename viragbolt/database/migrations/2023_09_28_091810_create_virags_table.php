@@ -13,9 +13,8 @@ return new class extends Migration
     {
         Schema::create('virags', function (Blueprint $table) {
             $table->id('virag_id');
-            $table->string('neve', 32);
-            $table->integer('tipus_id');
-            $table->foreignId('tipus_id')->references('tipus_id')->on('tipuses');
+            $table->string('neve', 32);            
+            $table->foreignId('tipus')->references('tipus_id')->on('tipuses');
             $table->timestamps();
         });
     }
