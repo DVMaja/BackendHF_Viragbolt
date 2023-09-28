@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Termek;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -17,6 +18,18 @@ return new class extends Migration
             $table->foreignId('virag')->references('virag_id')->on('virags');
             $table->timestamps();
         });
+
+        Termek::create([
+            'termek_id' => 1
+            ,'eladasi_ar' => 1000
+            ,'tipus' => 1
+        ]);
+
+        Termek::create([
+            'termek_id' => 2
+            ,'eladasi_ar' => 16000
+            ,'tipus' => 2
+        ]);
     }
 
     /**
