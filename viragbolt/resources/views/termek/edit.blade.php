@@ -1,24 +1,11 @@
 <form action="/api/termeks{{$termek->id}}" method="post">
     {{csrf_field()}}
-    {{method_field('PUT')}}
-    <input type="text" name="title" placeholder="Title">
-    <input type="text" name="description" placeholder="Description">
-    <select name="user_id" placeholder="User Id">
-        @foreach ($users as $user)
-            <option value="{{$user->id}}" 
-            {{$user->id == $termek->user_id ? 'selected' : ''}}>
-            {{$user->name}}</option>
+    {{method_field('PUT')}}    
+    <input type="text" name="eladasi_ar" placeholder="eladasi_ar">
+    <select name="virag_id">
+        @foreach ($virags as $virag)
+            <option value="{{$virag->id}}" 
+            {{$virag->id == $termek->virag_id ? 'selected' : ''}}>
+            {{$virag->name}}</option>
         @endforeach
     </select>
-    
-    <input type="date" name="end_date" placeholder="End_date">
-    <select name="status" placeholder="Status">
-        <option value="1"
-        <?php echo $termek->status == 1 ? 'selected' : ''?>
-        >Open</option>
-        <option value="0"
-        <?php echo $termek->status == 0 ? 'selected' : ''?>
-        >Closed</option>
-    </select>
-    <input type="submit" value="Ok">
-</form>
