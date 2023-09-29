@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\TermekController;
+use App\Http\Controllers\TermekController;
 use Illuminate\Support\Facades\Route;
 
 /*
